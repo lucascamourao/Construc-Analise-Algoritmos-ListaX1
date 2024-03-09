@@ -1,8 +1,9 @@
+// Ordenation 0-1-2
 // Ordenação 0-1-2 
 
 #include <iostream>
 
-void troca(int L[], int i, int j) {
+void swap(int L[], int i, int j) {
     int aux = L[i];
     L[i] = L[j];
     L[j] = aux;
@@ -11,16 +12,15 @@ void troca(int L[], int i, int j) {
 int main() {
     int L[] = {0, 1, 2, 2, 1, 0, 0, 1, 2, 0, 1, 2, 2, 1, 0, 0, 1, 2};
     int n = sizeof(L) / sizeof(L[0]);
-    //ordenacao0_1(L, n); // coloca os 0s nas primeiras n/3 posições (de 0 a n/3 - 1)
     int x = (n/3);
     int y = n - 1;
     int i = 0;
     int j = n - 1; 
 
-    // ordenando 0s 
+    // ordenating 0s
     while (i < n/3 && j >= n/3) {
         if (L[i] != 0) {
-            troca(L, i, j);
+            swap(L, i, j);
             j--;
         }
         else {
@@ -28,10 +28,10 @@ int main() {
         }
     }
 
-    // ordenando 1s 
+    // ordenating 1s 
     while ((x < (2*n/3)) && (y >= (2*n/3))) {
         if (L[x] != 1) {
-            troca(L, x, y);
+            swap(L, x, y);
             y--;
         }
         else {
@@ -39,7 +39,7 @@ int main() {
         }
     }
 
-    std::cout << "\nORDENACAO: \n";
+    std::cout << "\nORDENATION: \n";
     for (int k = 0; k < n; k++) {
         std::cout << L[k] << " ";
     }
@@ -48,3 +48,4 @@ int main() {
 }
 
 // Análise do algoritmo em README_ordenacao0-1-2.md
+// Algorithm analysis in README_ordenation0-1-2.md
