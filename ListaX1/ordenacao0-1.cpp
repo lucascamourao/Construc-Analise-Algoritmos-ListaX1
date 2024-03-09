@@ -1,8 +1,9 @@
+// Ordenation 0-1
 // Ordenação 0-1
 
 #include <iostream>
 
-void troca(int L[], int i, int j) {
+void swap(int L[], int i, int j) {
     int aux = L[i];
     L[i] = L[j];
     L[j] = aux;
@@ -16,7 +17,7 @@ int main() {
 
     while (i < n/2 && j >= n/2) {
         if (L[i] != 0) {
-            troca(L, i, j);
+            swap(L, i, j);
             j--;
         }
         else {
@@ -32,3 +33,4 @@ int main() {
 }
 
 // Análise do algoritmo em README_ordenacao0-1.md
+// Algorithm analysis in README_ordenation0-1.md
