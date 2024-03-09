@@ -1,7 +1,7 @@
 # List - Construction and Algorithm Analysis 2023.2 Prof. Dr. Carlos Eduardo Fisch de Brito
 By: Lucas Cabral Amador Mourão
 
-## Ordenation 0-1-2
+## Ordenation 0-1-2 
 
 Imagine the list L is a list of size n where
 
