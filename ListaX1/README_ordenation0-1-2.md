@@ -1,4 +1,5 @@
-# List - Construction and Algorithm Analysis 2023.2 Prof. Dr. Carlos Eduardo Fisch de Brito
+# List - Construction and Algorithm Analysis 2023.2 
+Prof. Dr. Carlos Eduardo Fisch de Brito
 By: Lucas Cabral Amador Mourão
 
 ## Ordenation 0-1-2 
