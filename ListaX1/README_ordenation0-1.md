@@ -1,23 +1,24 @@
-List - Construction and Algorithm Analysis 2023.2 Prof. Dr. Carlos Eduardo Fisch de Brito
+# List - Construction and Algorithm Analysis 2023.2 
+Prof. Dr. Carlos Eduardo Fisch de Brito
 
 By: Lucas Cabral Amador Mourão
 
-Ordenation 0-1
+## Ordenation 0-1
 
 Imagine the list L is a list of size n where
 
-n/2 of the elements are 0
-n/2 of the elements are 1
-O problema consiste em ordenar a lista L em tempo O(n). E a restrição é que isso deve ser feito apenas por meio de chamadas à função Troca(i,j), que troca os elementos das posições i,j de lugar. Apresente um algoritmo que realiza essa tarefa. E apresente a sua analise, para demonstrar que ele executa em tempo O(n).
+- n/2 of the elements are 0
+- n/2 of the elements are 1
 
-ANÁLISE DO ALGORITMO:
+### The problem consists in ordenate a list L in time O(n). And the restriction is: this has to be done only by calls to the function swap(i, j) // swap the elements of positions i, j <br/> Present an algorithm that performs this task. And present your analysis to demonstrate that it runs in O(n) time.
 
-Temos duas variáveis "deslizantes", uma em cada ponta da lista: 'i' e 'j'. Vamos percorrendo e, se pela esquerda o elemento não for 0, trocamos com o elemento na posição j. Também, voltamos para a esquerda com a variável j. Assim, jogamos o que não queremos pro final. Se o elemento da atual posição i [até (n/2) - 1] for igual a 0, então avançamos para a direita com a variável i. À medida que vamos avançando, todos os elementos da posição 0 até a (n/2) - 1 são iguais a 0. Logo, o resto será 1.
+### ALGORITHM ANALYSIS:
 
-Analisando o tempo de execução:
+- We have two "sliding" variables, one at the start and one at end of the list: 'i' and 'j'. We go through and, if on the left the element is not 0, we change it with the element in position j. Also, we go back to the left with the variable j. So, we throw what we don't want to the end. If the element of the current position i (up to (n/2) - 1) is equal to 0, then we move to the right with the variable i. As we go forward, all elements from position 0 to (n/2) - 1 are equal to 0. Therefore, the rest will be 1.
 
-A função troca(i, j) não tem muito custo assintótico. Tempo: O(1)
+### Analysing the time of exection:
 
-No while da linha 17, o pior que pode acontecer é o 'i' chegar até a posição (n/2) - 1 e o 'j' chegar na posição (n/2) + 1. E, na última iteração, que será a de parada, o 'i' ou o 'j' irá mudar. Assim, a lista é percorrida praticamente inteira, no pior caso. Logo, tempo assintótico O(n).
+- The function swap(i, j) doesn't have much asymptotic cost. Time complexity: O(1)
+- In the first while, the worst that can happen is that 'i' reaches position (n/2) - 1 and 'j' reaches position (n/2) + 1. And, in the last iteration, which will be the stopping one, 'i' or 'j' will change. Thus, the list is almost entirely covered, in the worst case. Therefore, asymptotic time of O(n).
 
-Tempo total de execução: O(n).
+### Total execution time: O(n).
